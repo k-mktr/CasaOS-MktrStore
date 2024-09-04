@@ -1,4 +1,4 @@
-# CasaOS Marketing App Store
+# CasaOS Mktr AppStore
 
 Development version of CasaOS AppStore with apps not yet available in the main repository and third-party ones. 
 
