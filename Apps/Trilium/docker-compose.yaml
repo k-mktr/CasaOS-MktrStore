@@ -1,13 +1,13 @@
-name: trilium
+name: triliumnext
 services:
   trilium:
     command: []
-    container_name: trilium
+    container_name: triliumnext
     deploy:
       resources:
         reservations:
           memory: "256M"
-    image: zadam/trilium:0.62.2
+    image: triliumnext/notes:latest
     labels:
       icon: https://icon.casaos.io/main/all/trilium.png
     ports:
@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DATA/AppData/trilium
+        source: /DATA/AppData/triliumnext
         target: /home/node/trilium-data
     network_mode: bridge
     privileged: false
@@ -26,12 +26,12 @@ x-casaos:
     - amd64
     - arm64
     - arm
-  author: Jason McFeetors
+  author: zadam
   category: Notes
   description:
-    en_us: Trilium Notes is a hierarchical note-taking application with a focus on building large personal knowledge bases.
-    zh_cn: Trilium Notes是一款具有层次结构的笔记应用程序，专注于构建庞大的个人知识库。
-  developer: zadam
+    en_us: TriliumNext Notes is actively developed fork of Trilium Notes, a hierarchical note-taking application with a focus on building large personal knowledge bases.
+    zh_cn: TriliumNext Notes 是 Trilium Notes 的活跃开发分支，一个具有层次结构的笔记应用程序，专注于构建庞大的个人知识库。
+  developer: triliumnext
   icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Trilium/icon.png
   screenshot_link:
     - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Trilium/screenshot-1.png
@@ -40,7 +40,7 @@ x-casaos:
   index: /
   port_map: "8088"
   scheme: http
-  store_app_id: trilium
+  store_app_id: triliumnext
   title:
-    en_us: Trilium
-    zh_cn: Trilium
+    en_us: TriliumNext
+    zh_cn: TriliumNext
